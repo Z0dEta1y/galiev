@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kurs_flutter/features/feed/presentation/feed_screen.dart';
 import 'package:kurs_flutter/features/Habit/presentation/home_screen.dart';
-import 'package:kurs_flutter/features/services/presentation/services_screen.dart';
 import 'package:kurs_flutter/features/settings/settings_screen.dart';
 
 class NavigationWrapper extends StatefulWidget {
@@ -15,9 +13,7 @@ class _NavigationWrapperState extends State<NavigationWrapper> {
   int _currentIndex = 0;
 
   final List<Widget> _screens = [
-    HabitListScreen(),
-    const FeedScreen(),
-    const ServicesScreen(),
+    const HabitListScreen(),
     const SettingsScreen(),
   ];
 
@@ -25,14 +21,6 @@ class _NavigationWrapperState extends State<NavigationWrapper> {
     const BottomNavigationBarItem(
       icon: Icon(Icons.home),
       label: 'Привычки',
-    ),
-    const BottomNavigationBarItem(
-      icon: Icon(Icons.rss_feed),
-      label: 'Лента',
-    ),
-    const BottomNavigationBarItem(
-      icon: Icon(Icons.business_center),
-      label: 'Сервисы',
     ),
     const BottomNavigationBarItem(
       icon: Icon(Icons.settings),
